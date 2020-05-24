@@ -29,7 +29,7 @@
     'category': 'Base Profile',
     'version': '0.1',
     'depends': [
-        'crm', 'sale_subscription_dashboard',
+        'sale_subscription_dashboard',
         'partner_contact_personal_information_page',
         'partner_contact_birthdate',
         'partner_contact_gender'],
