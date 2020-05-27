@@ -24,27 +24,29 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 <record id="form_insurance_history" model="ir.ui.view">
     <field name="name">Partner insurance history</field>
     <field name="model">res.partner</field>
-    <field name="inherit_id" ref="partner_contact_personal_information_page.personal_information"/>
+    <field name="inherit_id" ref="base.view_partner_form"/>
     <field name="arch" type="xml">
         <data>
-            <xpath expr="//group[@name='personal_information_group']">
-                <group>
+            <xpath expr="//page[@name='internal_notes']" position="after">
+                <page string="Insurance history">
                     <group>
-                        <field name="note_1"/>
-                        <field name="note_2"/>
+                        <group>
+                            <field name="note_primary"/>
+                            <field name="note_extra"/>
+                        </group>
+                        <group>
+                            <field name="policy_number"/>
+                            <field name="company"/>
+                        </group>
+                        <group>
+                            <field name="plan"/>
+                            <field name="effective_date"/>
+                        </group>
+                        <group>
+                            <field name="p_date"/>
+                        </group>
                     </group>
-                    <group>
-                        <field name="policy_number"/>
-                        <field name="company"/>
-                    </group>
-                    <group>
-                        <field name="plan"/>
-                        <field name="effective_date"/>
-                    </group>
-                    <group>
-                        <field name="p_date"/>
-                    </group>
-                </group>
+                </page>
             </xpath>
         </data>
     </field>

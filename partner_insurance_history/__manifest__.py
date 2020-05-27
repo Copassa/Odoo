@@ -25,7 +25,7 @@
     'application': True,
     "summary": "Add insurance history for customers",
     "depends": [
-        "partner_contact_personal_information_page",
+        "base",
     ],
     "data": [
         "views/res_partner.xml",

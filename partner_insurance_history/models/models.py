@@ -23,8 +23,8 @@ class PartnerInsuranceHistory(models.Model):
     """Partners insurance history."""
     _inherit = "res.partner"
 
-    note_1 = fields.Text(string='Notes 1')
-    note_2 = fields.Text(string='Notes 1')
+    note_primary = fields.Text(string='Notes primary')
+    note_extra = fields.Text(string='Notes extra')
     policy_number = fields.Char(string='Policy number')
     company = fields.Char(string='Company')
     plan = fields.Char(string='Plan')
