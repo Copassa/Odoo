@@ -32,9 +32,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                     <group>
                         <group>
                             <field name="note_primary"/>
-                            <field name="note_extra"/>
+                            <field name="policy_number"/>
                         </group>
                         <group>
+                            <field name="note_extra"/>
                             <field name="policy_number"/>
                             <field name="company"/>
                         </group>
