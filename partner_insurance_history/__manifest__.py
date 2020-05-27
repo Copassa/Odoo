@@ -14,7 +14,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 {
-    "name": "Contact gender",
+    "name": "Partner insurance history",
     "version": "13.0.1.0.0",
     "category": "Customer Relationship Management",
     "website": "",

@@ -6,7 +6,7 @@ import csv
 db = 'copassa_testing'
 host = 'http://3.23.176.152:9003'
 user = 'admin'
-password = 'admin'
+password = 'qazwsxedc123'
 
 sock_common = xmlrpc.client.ServerProxy('{0}/xmlrpc/common'.format(host))
 uid = sock_common.login(db, user, password)
@@ -30,13 +30,22 @@ for row in Customers:
 
     vals = {
         'company_type': 'person',
-        'customer': True,
-        'name': row['Name'].strip(),
-        'birthdate_date': row['BirthDate'].strip(),
+        'type': 'contact',
+        'customer_rank': True,
+        'name': row['NameCustomer'].strip(),
+        'birthdate_date': row[
+            'BirthDate'].strip() if row['BirthDate'] else False,
         'phone': row['Phone'].strip(),
         'mobile': row['Phone'].strip(),
         'email': row['Email'].strip(),
+        'note_primary': row['Note 1'].strip(),
+        'note_extra': row['Note 2'].strip(),
+        'policy_number': row['Policy Number'].strip(),
+        'company': row['Company'].strip(),
+        'plan': row['Plan'].strip(),
+        'effective_date': row['Effective Date'].strip(),
+        'p_date': row['P. Type'].strip(),
     }
-
+    print(vals)
     sock.execute_kw(
         db, uid, password, 'res.partner', 'create', [vals])
