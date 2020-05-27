@@ -21,8 +21,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 <openerp>
 <data>
 
-<record id="form" model="ir.ui.view">
-    <field name="name">Partner gender</field>
+<record id="form_insurance_history" model="ir.ui.view">
+    <field name="name">Partner insurance history</field>
     <field name="model">res.partner</field>
     <field name="inherit_id" ref="partner_contact_personal_information_page.personal_information"/>
     <field name="arch" type="xml">
